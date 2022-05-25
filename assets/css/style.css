@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+main {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #325ea8;
+}
+
+/* Buttons */
+.btn {
+    background-color: #325ea8;
+    color: #fff;
+    border-radius: 5px;
+    border: 0px solid #fff;
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px;
+    width: 170px;
+}
+
+.btn:hover {
+    background-color: #32a2a8;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px;
+    width: 170px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.btn a:visited {
+    color: #fff;
+}
+
+/* Styles for answer options */
+.option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.option ul li {
+    background-color: #325ea8;
+    color: #fff;
+    border-radius: 5px;
+    border: 0px solid #fff;
+    padding: 8px;
+    margin: 5px;
+    width: 170px;
+}
+
+.option ul li:hover {
+    background-color: #32a2a8;
+    color: #fff;
+    border-radius: 5px;
+    border: 0px solid #fff;
+    padding: 8px;
+    margin: 5px;
+    width: 170px;
+}
+
+#initialsInput {
+    height: 25px;
+    line-height: 16px;
+}

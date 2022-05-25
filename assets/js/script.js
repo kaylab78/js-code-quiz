@@ -59,23 +59,39 @@ var quizQuestions = [
 ];
 
 function startQuiz() {
-    renderQuestions();
+    showQuestion();
+    // checkAnswer();
 };
 
-function renderQuestions() {
-    questionEl.textContent = quizQuestions[0].question;
-    // renderChoices();
+function showQuestion() {
+    for (var i = 0; i < quizQuestions.length; i++) {
+        var showQuestion = quizQuestions[i].question;
+        var showChoices = quizQuestions[i].choices;
+    };
+
+    questionEl.textContent = showQuestion;
+    choicesEl.textContent = showChoices;
+
+    choicesEl.addEventListener("click", checkAnswer);
+    feedbackEl.setAttribute("style", "display: none");
+}
+
+// How do I check to see if they CLICKED the correct answer?
+function checkAnswer() {
+    var answer = quizQuestions[currentIndex].answer
+
+    if (this.value !== quizQuestions[currentIndex].answer) {
+        timeLeft -= 10;
+        // feedbackEl.setAttribute("style", "display: block");
+        feedbackEl.textContent = "Incorrect!"
+    } else {
+        // feedbackEl.setAttribute("style", "display: block");
+        feedbackEl.textContent = "Correct!"
+    }
+
+    currentIndex++
+    showQuestion();
 };
-
-// function renderChoices() {
-//     for (let i = 0; i < quizQuestions[0].choices.length; i++) {
-//         const element = array[i];
-        
-//     }
-//     choicesEl.textContent = quizQuestions
-// };
-
-// function checkAnswer();
 
 // function scoreDisplay();
 
