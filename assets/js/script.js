@@ -9,6 +9,7 @@ var initialsInput = document.getElementById("initialsInput");
 var feedback = document.getElementById("feedback");
 var setInterval;
 var timeLeft = 40;
+var currentIndex = 0;
 
 // Countdown makes sure that seconds remaining don't go negative.
 function countdown() {
@@ -33,6 +34,29 @@ function timer() {
 };
 
 startEl.addEventListener("click", timer);
+
+var quizQuestions = [
+    {
+        question: "Which is NOT a commonly used JavaScript data type?",
+        choices: ["String", "Boolean", "Alert", "Number"],
+        answer: "Alert"
+    },
+    {
+        question: "The condition in an if/else statement is enclosed in which of the following?",
+        choices: ["Quotation Marks", "Curly Brackets", "Parentheses", "Square Brackets"],
+        answer: "Curly Brackets"
+    },
+    {
+        question: "Which of the following can be stored in arrays in JavaScript?",
+        choices: ["Numbers & Strings", "Booleans", "Other Arrays", "All of the Above"],
+        answer: "All of the Above"
+    },
+    {
+        question: "When being assigned to a variable, which of the following must string values be enclosed with?",
+        choices: ["Commas", "Curly Brackets", "Quotation Marks", "Parentheses"],
+        answer: "Quotation Marks"
+    }
+];
 
 // function startQuiz();
 
