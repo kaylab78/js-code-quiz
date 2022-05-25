@@ -1,12 +1,12 @@
 var timerEl = document.getElementById("timer");
 var startEl = document.getElementById("startBtn");
-var introText = document.getElementById("intro");
-var question = document.getElementById("question");
-var choices = document.getElementById("choices");
-var scoreText = document.getElementById("scoreText");
-var initials = document.getElementById("initials");
+var introEl = document.getElementById("intro");
+var questionEl = document.getElementById("question");
+var choicesEl = document.getElementById("choices");
+var scoreTextEl = document.getElementById("scoreText");
+var initialsEl = document.getElementById("initials");
 var initialsInput = document.getElementById("initialsInput");
-var feedback = document.getElementById("feedback");
+var feedbackEl = document.getElementById("feedback");
 var setInterval;
 var timeLeft = 40;
 var currentIndex = 0;
@@ -28,9 +28,9 @@ function countdown() {
 function timer() {
     timerEl.textContent = timeLeft + " Seconds Remaining";
     setInterval = setInterval(countdown, 1000);
-    introText.setAttribute("style", "display: none");
+    introEl.setAttribute("style", "display: none");
     startEl.setAttribute("style", "display: none");
-    // startQuiz();
+    startQuiz();
 };
 
 startEl.addEventListener("click", timer);
@@ -58,11 +58,24 @@ var quizQuestions = [
     }
 ];
 
-// function startQuiz();
+function startQuiz() {
+    renderQuestions();
+};
 
-// function renderQuestions();
+function renderQuestions() {
+    questionEl.textContent = quizQuestions[0].question;
+    // renderChoices();
+};
 
-// function renderChoices();
+// function renderChoices() {
+//     for (let i = 0; i < quizQuestions[0].choices.length; i++) {
+//         const element = array[i];
+        
+//     }
+//     choicesEl.textContent = quizQuestions
+// };
+
+// function checkAnswer();
 
 // function scoreDisplay();
 
