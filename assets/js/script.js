@@ -7,3 +7,39 @@ var scoreText = document.getElementById("scoreText");
 var initials = document.getElementById("initials");
 var initialsInput = document.getElementById("initialsInput");
 var feedback = document.getElementById("feedback");
+var setInterval;
+var timeLeft = 40;
+
+// Countdown makes sure that seconds remaining don't go negative.
+function countdown() {
+    timerEl.textContent = timeLeft + " Seconds Remaining";
+    if (timeLeft > 0) {
+        timeLeft--
+    } else if (timeLeft < 0) {
+        timeLeft = 0
+    } else {
+        timerEl.textContent = "You've run out of time. Try again!"
+        // scoreDisplay();
+    }
+};
+
+// The intro text and start button disappear when the start button is clicked.
+function timer() {
+    timerEl.textContent = timeLeft + " Seconds Remaining";
+    setInterval = setInterval(countdown, 1000);
+    introText.setAttribute("style", "display: none");
+    startEl.setAttribute("style", "display: none");
+    // startQuiz();
+};
+
+startEl.addEventListener("click", timer);
+
+// function startQuiz();
+
+// function renderQuestions();
+
+// function renderChoices();
+
+// function scoreDisplay();
+
+// function saveScore();
